@@ -218,4 +218,246 @@
     border-color: var(--sky);
   }
   .pricing-card h3 { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
-  .pricing-card .price {
+  .pricing-card .price { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 600; color: var(--white); line-height: 1; }
+  .pricing-card .price span { font-size: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 400; color: rgba(255,255,255,0.5); }
+  .pricing-card .range { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin: 0.25rem 0 1.25rem; }
+  .pricing-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pricing-card li { font-size: 0.9rem; color: rgba(255,255,255,0.7); display: flex; align-items: flex-start; gap: 8px; }
+  .pricing-card li::before { content: '✓'; color: var(--sky); font-weight: 500; flex-shrink: 0; margin-top: 1px; }
+  .title-note { margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.4); font-style: italic; }
+  .title-note strong { color: rgba(255,255,255,0.6); font-style: normal; }
+
+  .pilot { background: var(--green); }
+  .pilot h2 { color: var(--white); }
+  .pilot .section-intro { color: rgba(255,255,255,0.75); }
+
+  .pilot-form { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2rem; }
+  .pilot-form input {
+    flex: 1; min-width: 200px;
+    padding: 0.75rem 1rem; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08); color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+    outline: none;
+  }
+  .pilot-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .pilot-form input:focus { border-color: rgba(255,255,255,0.5); }
+  .pilot-form button {
+    background: var(--white); color: var(--green);
+    padding: 0.75rem 1.5rem; border-radius: 8px;
+    border: none; font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 500; cursor: pointer;
+    transition: transform .15s;
+  }
+  .pilot-form button:hover { transform: translateY(-1px); }
+
+  footer {
+    background: #080F1A; color: rgba(255,255,255,0.4);
+    padding: 2.5rem 5%; text-align: center;
+    font-size: 0.85rem;
+  }
+  footer strong { color: rgba(255,255,255,0.6); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">School<span>Bridge</span> AI</div>
+  <ul class="nav-links">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <a href="#pilot" class="nav-cta">Request a pilot</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Now accepting pilot districts</div>
+  <h1>Stop spending $80K a year<br>to <em>not reach</em> your families.</h1>
+  <p class="hero-sub">SchoolBridge AI automates parent outreach for K–12 districts — personalized texts, follow-ups, and two-way conversations in any language. At a fraction of what you spend today.</p>
+  <div class="hero-actions">
+    <a href="#pilot" class="btn-primary">Request a free pilot</a>
+    <a href="#how" class="btn-outline">See how it works</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num"><em>$30K–$150K</em></span>
+      <span class="stat-label">avg. district spends annually on outreach</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num"><em>5–15%</em></span>
+      <span class="stat-label">typical family response rate today</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num"><em>40+</em></span>
+      <span class="stat-label">languages handled automatically</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num"><em>80%</em></span>
+      <span class="stat-label">avg. cost reduction vs. manual outreach</span>
+    </div>
+  </div>
+</section>
+
+<section class="problem" id="problem">
+  <div class="container">
+    <p class="section-label">The problem</p>
+    <h2>Districts are pouring money into outreach that doesn't scale.</h2>
+    <p class="section-intro">Low-income families are the hardest to reach and the most critical to engage. The current approach — manual, fragmented, and expensive — isn't working.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="num">$80K+</div>
+        <h3>Average annual outreach spend</h3>
+        <p>Staff hours, mailers, community liaisons, and communication platforms — most of it manual and hard to measure.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">10%</div>
+        <h3>Typical engagement rate</h3>
+        <p>Most families never respond to district outreach. Not because they don't care — because the outreach doesn't reach them where they are.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">40+</div>
+        <h3>Languages in the average large district</h3>
+        <p>Existing tools send English messages. Families who don't speak English fluently get left behind entirely.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">0</div>
+        <h3>AI-native tools designed for this</h3>
+        <p>ParentSquare, Remind, and Blackboard are broadcast tools. They don't follow up, adapt, or handle two-way conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2>Your district runs campaigns. SchoolBridge handles the rest.</h2>
+    <p class="section-intro">Set up a campaign in minutes. The AI agent takes it from there — reaching families, following up, and reporting results back to you.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Upload your family list</h3><p>Sync from your SIS or upload a CSV. SchoolBridge validates contacts, detects language preferences, and identifies the best channel per family.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Set your campaign goal</h3><p>Attendance outreach? IEP scheduling? Title I enrollment? Choose a template or write your own. The AI personalizes every message automatically.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>The agent goes to work</h3><p>Messages go out via SMS, email, or voice. Non-responders get intelligent follow-ups. Replies are handled by the AI — escalating to staff only when needed.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Review outcomes</h3><p>Your dashboard shows engagement rates, conversations, and open items in real time. Export compliance reports for Title I documentation.</p></div>
+      <div class="step"><div class="step-num">5</div><h3>Families get heard</h3><p>Two-way conversations mean families can ask questions, book meetings, and get resources — all without picking up the phone and waiting on hold.</p></div>
+      <div class="step"><div class="step-num">6</div><h3>You save time and money</h3><p>Most districts recoup the annual subscription cost within the first campaign by eliminating manual follow-up and staff phone-banking time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <p class="section-label">Features</p>
+    <h2>Everything your outreach team needs — built in.</h2>
+    <p class="section-intro">SchoolBridge AI is purpose-built for K–12 districts, not adapted from a generic CRM or messaging tool.</p>
+    <div class="features-grid">
+      <div class="feature-card" style="background:var(--ice);border-color:var(--border)">
+        <div class="feature-icon" style="background:#DBEEFF">💬</div>
+        <h3>Smart SMS & Email Outreach</h3>
+        <p>Personalized messages sent via the channel each family responds to best, at the right time of day.</p>
+      </div>
+      <div class="feature-card" style="background:var(--mint);border-color:#C8E8D4">
+        <div class="feature-icon" style="background:#C8E8D4">🔄</div>
+        <h3>Adaptive Follow-Up</h3>
+        <p>Automatically sequences follow-ups on non-response, varying content and channel each time.</p>
+      </div>
+      <div class="feature-card" style="background:var(--ice);border-color:var(--border)">
+        <div class="feature-icon" style="background:#DBEEFF">🌐</div>
+        <h3>40+ Language Support</h3>
+        <p>Detects and responds in the family's native language — no bilingual staff required for campaigns.</p>
+      </div>
+      <div class="feature-card" style="background:var(--mint);border-color:#C8E8D4">
+        <div class="feature-icon" style="background:#C8E8D4">📅</div>
+        <h3>Meeting & Event Booking</h3>
+        <p>Families can book meetings directly through the conversation flow. Syncs with Google and Outlook.</p>
+      </div>
+      <div class="feature-card" style="background:var(--ice);border-color:var(--border)">
+        <div class="feature-icon" style="background:#DBEEFF">📊</div>
+        <h3>Admin Dashboard</h3>
+        <p>Real-time engagement rates, campaign status, conversation logs, and exportable compliance reports.</p>
+      </div>
+      <div class="feature-card" style="background:var(--mint);border-color:#C8E8D4">
+        <div class="feature-icon" style="background:#C8E8D4">🔒</div>
+        <h3>FERPA Compliant</h3>
+        <p>Built for K–12 data privacy from day one. U.S.-based storage, opt-in/out flows, full audit trail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <p class="section-label">Pricing</p>
+    <h2>Simple annual pricing. No per-message surprises.</h2>
+    <p class="section-intro">Every tier includes the full SchoolBridge AI platform. Price scales with your district size, not your usage.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price">$12,000 <span>/ year</span></div>
+        <div class="range">Districts under 5,000 students</div>
+        <ul>
+          <li>Up to 2,500 families</li>
+          <li>5 campaigns per year</li>
+          <li>SMS + email outreach</li>
+          <li>Admin dashboard</li>
+          <li>Standard support</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Growth</h3>
+        <div class="price">$28,000 <span>/ year</span></div>
+        <div class="range">Districts 5,000–15,000 students</div>
+        <ul>
+          <li>Up to 7,500 families</li>
+          <li>Unlimited campaigns</li>
+          <li>SMS + email + voice</li>
+          <li>40+ language support</li>
+          <li>Calendar booking integration</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <h3>District</h3>
+        <div class="price">Custom <span></span></div>
+        <div class="range">15,000+ students</div>
+        <ul>
+          <li>Unlimited families & campaigns</li>
+          <li>All channels + voice AI</li>
+          <li>SIS integration (PowerSchool, etc.)</li>
+          <li>Custom reporting</li>
+          <li>Dedicated success manager</li>
+          <li>FERPA BAA + compliance pack</li>
+        </ul>
+      </div>
+    </div>
+    <p class="title-note"><strong>Title I eligible:</strong> SchoolBridge AI may qualify as a Title I Part A family engagement expenditure. Ask us about documentation for your district's compliance team.</p>
+  </div>
+</section>
+
+<section class="pilot" id="pilot">
+  <div class="container">
+    <p class="section-label" style="color:rgba(255,255,255,0.5)">Limited availability</p>
+    <h2>Apply for a free pilot district spot.</h2>
+    <p class="section-intro">We're currently accepting a small number of pilot districts at no cost in exchange for a brief case study. If your district spends meaningful budget on parent outreach today, you qualify.</p>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:var(--r);padding:2.5rem;max-width:680px">
+      <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--white);margin-bottom:0.5rem">Request access</h3>
+      <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem">Leave your info and we'll reach out within 1 business day to schedule a 20-minute discovery call.</p>
+      <form class="pilot-form" action="https://formspree.io/f/xlgookle" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="District email address" required>
+        <input type="text" name="district" placeholder="District name" required>
+        <button type="submit">Request pilot →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>SchoolBridge AI</strong> — A product of <strong>Cura AI Systems</strong></p>
+  <p style="margin-top:0.5rem">Built to help every family stay connected to their child's education.</p>
+</footer>
+
+<script>
+</script>
+</body>
+</html>
